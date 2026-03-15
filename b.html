@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediVideo-AI</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:20px;
+background:#f4f4f4;
+}
+
+h1{
+color:#333;
+}
+
+form{
+background:white;
+padding:20px;
+border-radius:8px;
+max-width:600px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+label{
+font-weight:bold;
+}
+
+input, textarea, select{
+width:100%;
+padding:8px;
+margin-top:8px;
+margin-bottom:15px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#218838;
+}
+
+#status{
+margin-top:20px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>MediVideo-AI: Upload Medical Content</h1>
+
+<form id="uploadForm" enctype="multipart/form-data">
+
+<label>Select PDF or PPTX File:</label> <input type="file" name="file">
+
+<label>Or Paste Script:</label>
+
+<textarea name="script" rows="4" placeholder="Enter medical script..."></textarea>
+
+<label>Upload Images for Video Scenes:</label> <input type="file" name="images" multiple>
+
+<label>Select Video Platform:</label> <select name="platform">
+
+<option value="youtube">YouTube (16:9)</option>
+<option value="tiktok">TikTok (9:16)</option>
+<option value="instagram">Instagram Reel</option>
+<option value="facebook">Facebook Post</option>
+
+</select>
+
+<label>Select AI Voice:</label> <select name="voice">
+
+<option value="male">Male Voice</option>
+<option value="female">Female Voice</option>
+
+</select>
+
+<label>Video Style:</label> <select name="style">
+
+<option value="lecture">Medical Lecture</option>
+<option value="animation">Animated Video</option>
+<option value="slides">Slide Presentation</option>
+
+</select>
+
+<button type="submit">Generate Video</button>
+
+</form>
+
+<div id="status"></div>
+
+</body>
+
+</html>
